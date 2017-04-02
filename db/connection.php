@@ -1,9 +1,10 @@
 <?php
 //---------------------------mysql db connection ------------//
 
-$hostname='localhost';
-$username='root';
-$password='';
+$hostname='appoinment.cba0t13azydt.us-west-2.rds.amazonaws.com';
+$username='team25';
+$password='team251234';
+
 
 /* $hostname='localhost';
 $username='ambicacl_vishal';
