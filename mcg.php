@@ -131,7 +131,7 @@
     padding-top: 100px;
 ">
      
-  <p style="font-size: 30px;">SCHEDULE online. IT'S easy, fast and secure</p>
+  <p style="font-size: 30px;">SCHEDULE ONLINE. IT'S EASY, FAST AND SECURE</p>
 
 <a href="booking.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
     </div>
