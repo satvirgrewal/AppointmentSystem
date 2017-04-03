@@ -104,7 +104,7 @@
     </ul>
 	
 	<ul class="nav navbar-nav navbar-right ">
-				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
+				<li  ><img src="crono.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
         </div>
     </div>
