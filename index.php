@@ -132,7 +132,7 @@
       </div>
 
       <div class="item">
-        <img src="22.jpg" class="img-responsive" alt="Chania" >
+        <img src="prof-dev.jpg" class="img-responsive" alt="Chania" >
       </div>
     
       <div class="item">
