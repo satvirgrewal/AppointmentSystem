@@ -8,17 +8,17 @@
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
 }
 .skin-black-light .main-header .navbar-toggle {
-  color: #333;
+  color: #800000;
 }
 .skin-black-light .main-header .navbar-brand {
-  color: #333;
+  color: #800000;
   border-right: 1px solid #eee;
 }
 .skin-black-light .main-header .navbar {
   background-color: #ffffff;
 }
 .skin-black-light .main-header .navbar .nav > li > a {
-  color: #333333;
+  color: #800000;
 }
 .skin-black-light .main-header .navbar .nav > li > a:hover,
 .skin-black-light .main-header .navbar .nav > li > a:active,
@@ -38,7 +38,7 @@
   background: #ffffff;
 }
 .skin-black-light .main-header .navbar > .sidebar-toggle {
-  color: #333;
+  color: #800000;
   border-right: 1px solid #eee;
 }
 .skin-black-light .main-header .navbar .navbar-nav > li > a {
@@ -51,7 +51,7 @@
 }
 .skin-black-light .main-header > .logo {
   background-color: #ffffff;
-  color: #333333;
+  color: #800000;
   border-bottom: 0 solid transparent;
   border-right: 1px solid #eee;
 }
