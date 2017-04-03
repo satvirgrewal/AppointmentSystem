@@ -128,7 +128,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" >
       <div class="item active">
-        <img src="12thman.png.jpg" class="img-responsive" alt="Chania" >
+        <img src="12thman.png" class="img-responsive" alt="Chania" >
       </div>
 
       <div class="item">
