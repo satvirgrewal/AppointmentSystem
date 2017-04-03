@@ -111,7 +111,7 @@
 </nav>
 
 <!--   main  -->
-<h1 style="padding-left:25px;">Dental Science</h1>
+<h1 style="padding-left:25px;">Dwight Look College of Engineering</h1>
 <div class="container-fluid bg-main">
   <div class="row">
    <div class="col-md-12" style="
