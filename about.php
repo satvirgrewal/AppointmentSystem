@@ -126,9 +126,8 @@
     </div>
     <div class="col-sm-8" style="padding-top: 100px;">
       <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4><strong>MISSION:</strong> Our mission is providing the web-based appointment system for the students to schedule meetings with the professor and for the professors to manage the appointments with a few clicks of a button. Given the number of students, this website will not only allow the desktop users but also the tablet and mobile phone users to use the functionality.</h4><br>
+      <p><strong>VISION:</strong> The website is an online appointment booking system to schedule meetings between the students and the professor. Texas A&M University has more than 60000 students enrolled and is home to more than 3500 faculty members. The student diaspora is diverse with many international students as well as students from other parts of the United States enroll at Texas A&M University for their respective degrees. This makes it very crucial that the students get the required guidance for their courses, research, and advising from the professors and senior faculty members</p>
     </div>
   </div>
 </div>
