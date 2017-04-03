@@ -153,8 +153,8 @@ if(isset($_SESSION['id']))
 						<label>Select Department</label>
 						<select class="form-control input-sm" id="dept" >
 								<option selected="default" value='NA' disabled>---Select YOur Department---</option>
-									<option value='MCG School' >MCG School</option>
-									<option  value='Dental Science' >Dental Science</option>
+									<option value='MAYS BUSINESS School' >MAYS BUSINESS School</option>
+									<option  value='Dwight Look College of Engineering' >Dwight Look College of Engineering</option>
 									<option  value='Others' >Others</option>
 									
 							
