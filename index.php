@@ -136,7 +136,7 @@
       </div>
     
       <div class="item">
-        <img src="33.jpg" class="img-responsive" alt="Flower" >
+        <img src="12thman.jpg" class="img-responsive" alt="Flower" >
       </div>
 
       <div class="item">
