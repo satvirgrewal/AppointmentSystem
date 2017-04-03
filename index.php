@@ -140,7 +140,7 @@
       </div>
 
       <div class="item">
-        <img src="44.jpg" class="img-responsive" alt="Flower" >
+        <img src="college-front.jpg" class="img-responsive" alt="Flower" >
       </div>
     </div>
 
