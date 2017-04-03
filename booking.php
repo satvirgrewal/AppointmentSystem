@@ -103,7 +103,7 @@ if(!isset($_SESSION['id']))
           <li><a href="mcg.php"  style="
     padding-left: 20px;
     padding-right: 50px;
-">MCG SCHOOL</a></li>
+">MAYS BUSINESS SCHOOL</a></li>
           <li class="navigation "><a href="detal.php"style="
     padding-left: 20px;
     padding-right: 50px;
