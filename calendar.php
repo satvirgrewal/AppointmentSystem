@@ -54,7 +54,7 @@
 <nav class="navbar navbar-inverse navi" style=" margin-bottom:0px;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand fnt" href="index.php">Appoinment Scheduler</a>
+      <a class="navbar-brand fnt" href="index.php">Howdy Professor</a>
     </div>
     <ul class="nav navbar-nav navbar-right ">
 	<li class="navigation   fnt"><a href="staff_profile.php"style="padding-left: 50px;padding-right: 50px;">Profile</a></li>
