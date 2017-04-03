@@ -89,7 +89,7 @@
           <li class="navigation "><a href="detal.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">Detal School</a></li>
+">Dwight Look College of Engineering</a></li>
           <li class="navigation "><a href="other.php"style="
     padding-left: 20px;
     padding-right: 50px;
