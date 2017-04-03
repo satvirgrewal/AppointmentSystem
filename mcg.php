@@ -112,7 +112,7 @@
 
 
 <!--   main  -->
-<h1 style="padding-left:25px;">MCG School</h1>
+<h1 style="padding-left:25px;">MAYS BUSINESS SCHOOL</h1>
 <div class="container-fluid bg-main">
   <div class="row">
    <div class="col-md-12" style="
