@@ -127,7 +127,7 @@ if(!isset($_SESSION['id']))
     <div class="container">
      <div class="row">
 		<div class="col-md-12">
-      <p class="navbar-text pull-left" >© 2014 - Site Built By Mr. M.
+      <p class="navbar-text pull-left" >
           
       </p>
 	  </div>
