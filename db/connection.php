@@ -1,7 +1,8 @@
 <?php
 //---------------------------mysql db connection ------------//
 
-$hostname='appoinment.cba0t13azydt.us-west-2.rds.amazonaws.com';
+#$hostname='appoinment.cba0t13azydt.us-west-2.rds.amazonaws.com';
+$hostname=getenv('DB_HOSTNAME');
 $username='team25';
 $password='team251234';
 
