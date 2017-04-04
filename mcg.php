@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>MAYS BUSINESS School</title>
+  <title>Mays Business School</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -85,7 +85,7 @@
           <li><a href="mcg.php"  style="
     padding-left: 20px;
     padding-right: 50px;
-">MAYS BUSINESS SCHOOL</a></li>
+">Mays Business School</a></li>
           <li class="navigation "><a href="detal.php"style="
     padding-left: 20px;
     padding-right: 50px;
