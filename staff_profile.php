@@ -53,7 +53,7 @@ if(!isset($_SESSION['id']))
 
 <div class="row">
 <div class="col-md-12">
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-static-top navi" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -153,7 +153,7 @@ if(isset($_SESSION['id']))
 						<label>Select Department</label>
 						<select class="form-control input-sm" id="dept" >
 								<option selected="default" value='NA' disabled>---Select YOur Department---</option>
-									<option value='MAYS BUSINESS School' >MAYS BUSINESS School</option>
+									<option value='Mays Business School' >Mays Business School</option>
 									<option  value='Dwight Look College of Engineering' >Dwight Look College of Engineering</option>
 									<option  value='Others' >Others</option>
 									

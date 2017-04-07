@@ -100,7 +100,7 @@
 
   <div class="navbar navbar-default navbar-fixed-bottom grey">
     <div class="container">
-      <p class="navbar-text pull-left" >© 2014 - Site Built By Mr. M.
+      <p class="navbar-text pull-left" >
           
       </p>
     

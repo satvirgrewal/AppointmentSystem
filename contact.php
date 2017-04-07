@@ -52,7 +52,7 @@
 </div>
 
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-static-top navi" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -73,7 +73,7 @@
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 50px;
     padding-right: 50px;
-">Home</a></li>
+">HOME</a></li>
  
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
@@ -86,7 +86,7 @@
           <li><a href="mcg.php"  style="
     padding-left: 20px;
     padding-right: 50px;
-">MAYS BUSINESS SCHOOL</a></li>
+">Mays Business School</a></li>
           <li class="navigation "><a href="detal.php"style="
     padding-left: 20px;
     padding-right: 50px;
@@ -100,7 +100,7 @@
       <li class="navigation   fnt"><a href="contact.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">Contact</a></li>
+">CONTACT</a></li>
 
     </ul>
 	
@@ -189,7 +189,7 @@
     <div class="container">
       <div class="row">
 		<div class="col-md-12">
-      <p class="navbar-text pull-left" >© 2014 - Site Built By Mr. M.
+      <p class="navbar-text pull-left" >
           
       </p>
 	  </div>

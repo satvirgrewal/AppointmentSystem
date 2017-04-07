@@ -68,7 +68,7 @@
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 50px;
     padding-right: 50px;
-">Home</a></li>
+">HOME</a></li>
  
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 50px;
@@ -81,7 +81,7 @@
           <li><a href="mcg.php"  style="
     padding-left: 50px;
     padding-right: 50px;
-">MAYS BUSINESS SCHOOL</a></li>
+">Mays Business School</a></li>
           <li class="navigation "><a href="detal.php"style="
     padding-left: 50px;
     padding-right: 50px;
@@ -95,7 +95,7 @@
       <li class="navigation   fnt"><a href="contact.php"style="
     padding-left: 50px;
     padding-right: 50px;
-">Contact</a></li>
+">CONTACT</a></li>
     </ul>
         </div>
     </div>
@@ -180,7 +180,7 @@
     <div class="container">
 		<div class="row">
 		<div class="col-md-12">
-      <p class="navbar-text pull-left" >© 2014 - Site Built By Mr. M.
+      <p class="navbar-text pull-left" >
           
       </p>
 	  </div>

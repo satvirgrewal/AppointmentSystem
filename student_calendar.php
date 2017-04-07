@@ -62,7 +62,7 @@ if(!isset($_SESSION['id']))
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="row">
 <div class="col-md-12">
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-static-top navi" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -130,7 +130,7 @@ if(!isset($_SESSION['id']))
     <div class="container">
      <div class="row">
 		<div class="col-md-12">
-      <p class="navbar-text pull-left" >© 2014 - Site Built By Mr. M.
+      <p class="navbar-text pull-left" >
           
       </p>
 	  </div>
