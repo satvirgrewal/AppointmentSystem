@@ -145,7 +145,7 @@
 					</div>
 			<center>	           
             
-        <button type="button" id="login" name="login" class="btn btn-primary pull-right" style="margin-right:120px;size:50px;">Login</button>
+        <button type="button" id="login" name="login" class="btn btn-primary pull-center" style="margin-center:120px;size:50px;">Login</button>
 		<label class="lbl" id='msg1'></label>
 		</center>
 		
