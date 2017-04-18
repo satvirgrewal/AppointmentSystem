@@ -162,21 +162,29 @@
   
   
   
-  
+ <!-- 
   
 <div class="container-fluid bg-grey">
+-->
+<div class="container-fluid">
   <div class="row">
   <div class="col-md-12" style="padding-top: 25px;padding-bottom: 75px;">
   <div class="col-md-4">
   </div>
   
-    <div class="col-md-4">
-      <h1> Schedule your appointment online</h1>
+  <div class="col-md-4">
+      <h2 style="text-align:center"> Say Howdy !!! to your professor</h2>
+      <h4 style="text-align:center"> Now scheduling an appointment with your professor is clicks away. The online appointment system is here to help you.
+        See availability of the professors, book an appointment, or see your scheduled appointments all in one place. So book your appointment
+         right away and say Howdy !!! to your professor.
+      </h4>
     </div>
-	<div class="col-md-4">
+<!--
+  <div class="col-md-4">
 <a href="booking.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
 
   </div>
+-->
   
 	
 	
