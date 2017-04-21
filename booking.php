@@ -1,6 +1,6 @@
 <?php
-/* SESSION_START();
-if(!isset($_SESSION['id']))
+session_start();
+/*if(!isset($_SESSION['id']))
 {
 	header("Location: signin.php");
 } */
@@ -11,7 +11,7 @@ if(!isset($_SESSION['id']))
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Booking Page</title>
-  
+
    <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -22,7 +22,7 @@ if(!isset($_SESSION['id']))
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
    <!-- DataTables -->
   <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
- 
+
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -40,9 +40,13 @@ if(!isset($_SESSION['id']))
 <body class="hold-transition skin-blue sidebar-mini">
 
 <?php
- SESSION_START();
-if(!isset($_SESSION['id']))
+
+if(!isset($_SESSION['id']) )
 {
+  include "ajax/booking_selection_data.php";
+  echo $college;
+
+
 ?>
  <div class="container">
 <div class="row">
@@ -91,7 +95,7 @@ if(!isset($_SESSION['id']))
     padding-left: 50px;
     padding-right: 50px;
 ">HOME</a></li>
- 
+
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
     padding-right: 50px;
@@ -120,7 +124,7 @@ if(!isset($_SESSION['id']))
 ">CONTACT</a></li>
 
     </ul>
-	
+
 	<ul class="nav navbar-nav navbar-right ">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
@@ -128,11 +132,11 @@ if(!isset($_SESSION['id']))
     </div>
 </nav>
 <?php
-} 
+}
 else
 {
 	?>
-	
+
 <nav class="navbar navbar-inverse navbar-static-top navi" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -154,7 +158,7 @@ else
 	<li class="navigation   fnt"><a href="booking.php"style="padding-left: 50px;padding-right: 30px;">Appoinment Booking</a></li>
    <li class="navigation   fnt"><a href="student_calendar.php"style="padding-left: 50px;padding-right: 30px;">My Scheduler</a></li>
     <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
-   
+
     </ul>
 	<ul class="nav navbar-nav navbar-right ">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
@@ -167,29 +171,31 @@ else
 	<?php
 }
 ?>
-  
+
     <!-- Main content -->
-		
+
     <section class="content">
-      
+
 		<!-- /.Start Table Div -->
 		<div class="row">
         <div class="col-md-12">
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Staff List</h3>
+            <div >
+              <h1 class="box-title" style="text-align:center;" >Faculty</h1>
+
+<tr><td> <input type="hidden" name="type" value="<?= $college ?>" ></td></tr>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
 				<table id="example2" class="table table-bordered table-striped">
-                
+
               </table>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
 
-         
+
         </div>
         <!-- /.col -->
       </div>
@@ -205,21 +211,21 @@ else
     </section>
    <!-- /.content -->
 	</div>
- 
+
   <!-- /.content-wrapper -->
   <div class="navbar navbar-default navbar-fixed-bottom grey">
     <div class="container">
       <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 
   <!-- Add the sidebar's background. This div must be placed
