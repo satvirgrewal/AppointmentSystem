@@ -1,7 +1,7 @@
 <?php
 include('../db/connection.php');
 
-if(isset($_REQUEST['type']) && isset($_REQUEST['name']) && isset($_REQUEST['uin']) && isset($_REQUEST['email']) && isset($_REQUEST['pass1']) && isset($_REQUEST['pass2']))
+if(isset($_REQUEST['type']) && isset($_REQUEST['name']) && isset($_REQUEST['uin']) && isset($_REQUEST['email']) && isset($_REQUEST['pass1']) && isset($_REQUEST['pass2']) && isset($_REQUEST['college']) && isset($_REQUEST['department']))
 {
 	$type=$_REQUEST['type'];
 	$name=$_REQUEST['name'];
@@ -9,22 +9,24 @@ if(isset($_REQUEST['type']) && isset($_REQUEST['name']) && isset($_REQUEST['uin'
 	$email=$_REQUEST['email'];
 	$pass1=$_REQUEST['pass1'];
 	$pass2=$_REQUEST['pass2'];
-	
+	$college=$_REQUEST['college'];
+	$department=$_REQUEST['department'];
+
 	if($pass1 == $pass2)
 	{
-	
-	if($type != 0 && !empty($name) && !empty($uin) && !empty($email) && !empty($pass1) && !empty($pass2))
+
+	if($type != 0 && !empty($name) && !empty($uin) && !empty($email) && !empty($pass1) && !empty($pass2) && !empty($college) && !empty($department))
 	{
 		$s1="select count(uin_no) as cnt from uin where uin_no in ('$uin')";
 		foreach ($dbh->query($s1) as $r1)
 		{
 			$cnt=$r1['cnt'];
 		}
-		
+
 		if($cnt != 0)
 		{
-			$sql = "INSERT INTO `signup`(`type`, `name`, `uin`, `email`, `pass`) VALUES ('$type','$name','$uin','$email','$pass1')";		
-			
+			$sql = "INSERT INTO `signup`(`type`, `name`, `uin`, `email`, `pass`,`college`,`department`) VALUES ('$type','$name','$uin','$email','$pass1','$college','$department')";
+
 			if($dbh->query($sql))
 			{
 				echo "<script>$('#msg').html('Data Save Successfully');</script>";
@@ -37,20 +39,20 @@ if(isset($_REQUEST['type']) && isset($_REQUEST['name']) && isset($_REQUEST['uin'
 		else{
 			echo "<script>$('#msg').html('please enter valid UIN number !!!');</script>";
 		}
-		
+
 	}
 	else
 	{
 			if($type == 0)
 			{
-				
+
 					echo "<script>$('#t').html('please select user type !!!');</script>";
 			}
 			else
 			{
 				echo "<script>$('#t').html('');</script>";
 			}
-			
+
 			if($name == '')
 			{
 				echo "<script>$('#n').html('please enter  name !!!');</script>";
@@ -59,7 +61,7 @@ if(isset($_REQUEST['type']) && isset($_REQUEST['name']) && isset($_REQUEST['uin'
 			{
 				echo "<script>$('#n').html('');</script>";
 			}
-			
+
 			if($uin == '')
 			{
 				echo "<script>$('#u').html('please select UIN number !!!');</script>";
@@ -91,6 +93,22 @@ if(isset($_REQUEST['type']) && isset($_REQUEST['name']) && isset($_REQUEST['uin'
 			else
 			{
 				echo "<script>$('#p2').html('');</script>";
+			}
+			if($college == '')
+			{
+				echo "<script>$('#c').html('please enter college !!!');</script>";
+			}
+			else
+			{
+				echo "<script>$('#c').html('');</script>";
+			}
+			if($department == '')
+			{
+				echo "<script>$('#d').html('please enter department !!!');</script>";
+			}
+			else
+			{
+				echo "<script>$('#d').html('');</script>";
 			}
 	}
 	}
