@@ -6,8 +6,10 @@ if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
 {
 	$uin=$_REQUEST['u_no'];
 	$email=$_REQUEST['user_email'];
-	
-	
+
+	$_SESSION['u_no'] = $uin;
+
+
 	if(!empty($uin) && !empty($email))
 	{
 	$s1="SELECT count(uin) as uin,id,type from signup where uin in ('$uin') and email in ('$email')";
@@ -17,7 +19,7 @@ if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
 			$id=$r1['id'];
 			$type=$r1['type'];
 		}
-		
+
 		if($uin == 0 && $id == null)
 		{
 			echo "<script>$('#msg1').html('your UIN or email not valid !!!');</script>";
@@ -27,7 +29,7 @@ if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
 			if($type == 2)
 			{
 				$_SESSION['id'] = $id;
-			
+
 			?>
 			<script>
 			window.location.href = 'staff_profile.php';
@@ -36,14 +38,14 @@ if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
 			}
 			else{
 				$_SESSION['id'] = $id;
-			
+
 			?>
 			<script>
-			window.location.href = 'booking.php';
+			window.location.href = 'booking_selection.php';
 			</script>
 			<?php
 			}
-			
+
 		}
 	}
 	else
@@ -56,7 +58,7 @@ if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
 			{
 				echo "<script>$('#uin').html('');</script>";
 			}
-			
+
 			if($email == '')
 			{
 				echo "<script>$('#email').html('please enter email !!!');</script>";
