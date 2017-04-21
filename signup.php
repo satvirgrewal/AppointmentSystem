@@ -10,17 +10,17 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="main.css" rel="stylesheet" type="text/css">
- 
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- 
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
 	  HEIGHT:50%;
-     
+
   }
  .lbl
  {
@@ -76,7 +76,7 @@
     padding-left: 50px;
     padding-right: 50px;
 ">HOME</a></li>
- 
+
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
     padding-right: 50px;
@@ -105,7 +105,7 @@
 ">CONTACT</a></li>
 
     </ul>
-	
+
 	<ul class="nav navbar-nav navbar-right ">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
@@ -113,33 +113,33 @@
     </div>
 </nav>
 <!--   main  -->
-<h1 style="padding-left:25px;">Sign Up Form</h1>
-<div class="container-fluid bg-main" style="height:600px;">
+<h1 style="padding-left:25px; text-align:center">Sign Up Form</h1>
+<div class="container-fluid bg-main" style="height:800px;">
   <div class="row">
    <div class="col-md-12" >
-  
+
     <div class="col-sm-4">
 	</div>
     <div class="col-sm-4">
-     
+
   <p style="font-size: 30px;">
 
 
 
-    <div class="form-area">  
-	
+    <div class="form-area">
+
         <form role="form">
-		
+
         <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">Enter Your Details</h3>
 					<div class="form-group">
 						<select class="form-control input-sm" id="type" >
 								<option selected="default" value='0' disabled>---Select User Type---</option>
 									<option value='1' >Student</option>
-									<option  value='2' >Staff</option>		
-							
+									<option  value='2' >Staff</option>
+
 							</select>
-							
+
 							<label class="lbl" id="t"></label>
 					</div>
     				<div class="form-group">
@@ -154,23 +154,66 @@
 						<input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email" required>
 						<label class="lbl" id="e"></label>
 					</div>
-					
+
+
+
 					<div class="form-group">
 						<input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter Password" required>
 						<label class="lbl" id="p1"></label>
 					</div>
+
                     <div class="form-group">
 						<input type="password" class="form-control" id="pass2" name="pass2" placeholder="Re-enter password" required>
 						<label class="lbl" id="p2"></label>
 					</div>
-                    
-          <div class="form-group">  
+
+          <div class="form-group">
+						<select class="form-control input-sm" id="college" >
+								<option selected="default" value='0' disabled>---Select your college---</option>
+									<option value='Mays Business School' >Mays Business School</option>
+									<option  value='Dwight Look College' >Dwight Look College</option>
+                  <option  value='Other' >Other</option>
+
+							</select>
+
+							<label class="lbl" id="c"></label>
+					</div>
+
+          <div class="form-group">
+						<select class="form-control input-sm" id="department" >
+								<option selected="default" value='0' disabled>---Select your department---</option>
+									<option value='INFO' >INFO</option>
+									<option  value='Marketing' >Marketing</option>
+                  <option  value='Finace' >Finace</option>
+                  <option value='Computer Science' >Computer Science</option>
+									<option  value='Civil Engineering' >Civil Engineering</option>
+                  <option  value='Aerospace Engineering' >Aerospace Engineering</option>
+							</select>
+
+							<label class="lbl" id="d"></label>
+					</div>
+
+
+<!--
+          <div class="form-group">
+            <input type="text" class="form-control" id="college" name="college" placeholder="Enter Your college" required>
+            <label class="lbl" id="c"></label>
+          </div>
+
+
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="department" name="department" placeholder="Enter Your department" required>
+            <label class="lbl" id="d"></label>
+          </div>
+-->
+          <div class="form-group">
         <button type="button" id="signup_save" class="btn btn-primary " >Save</button>
 		<label id="msg" style="color:blue;"></label>
 		</div>
-		
+
         </form>
-		
+
     </div>
 
     </div>
@@ -188,14 +231,14 @@
       <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 <!-- page script -->
 
