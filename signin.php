@@ -10,17 +10,17 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="main.css" rel="stylesheet" type="text/css">
- 
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- 
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
 	  HEIGHT:50%;
-     
+
   }
  .lbl
  {
@@ -77,7 +77,7 @@
     padding-left: 50px;
     padding-right: 50px;
 ">HOME</a></li>
- 
+
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
     padding-right: 50px;
@@ -106,7 +106,7 @@
 ">CONTACT</a></li>
 
     </ul>
-	
+
 	<ul class="nav navbar-nav navbar-right ">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
@@ -114,27 +114,27 @@
     </div>
 </nav>
 <!--   main  -->
-<h1 style="padding-left:25px;">Sign In Form</h1>
+<h1 style="padding-left:25px; text-align:center">Sign In Form</h1>
 <div class="container-fluid bg-main" style="height:400px;">
   <div class="row">
    <div class="col-md-12" >
-  
+
     <div class="col-md-5">
 	</div>
     <div class="col-md-2">
-     
+
   <p style="font-size: 30px;">
 
 
 
-    <div class="form-area">  
-	
+    <div class="form-area">
+
         <form role="form">
-		
+
         <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">Login Here</h3>
-					
-    				
+
+
 					<div class="form-group">
 						<input type="text" class="form-control" id="u_no"  placeholder="Enter Your UIN" required>
 						<label class="lbl" id='uin'></label>
@@ -143,14 +143,14 @@
 						<input type="text" class="form-control" id="user_email"  placeholder="Enter Your Email" required>
 						<label class="lbl" id='email'></label>
 					</div>
-			<center>	           
-            
+			<center>
+
         <button type="button" id="login" name="login" class="btn btn-primary pull-center" style="margin-center:120px;size:50px;">Login</button>
 		<label class="lbl" id='msg1'></label>
 		</center>
-		
+
         </form>
-		
+
     </div>
 
     </div>
@@ -168,14 +168,14 @@
      <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 
 <!-- page script -->
