@@ -19,7 +19,7 @@ echo $college */
 												unset($_SESSION['department']);
 											}
 
-											$sql = "SELECT * FROM `profile` as p, `signup` as s where s.college=p.dept and s.college in ('$college') and s.department in ('$department') group by p.staff_id";
+											$sql = "SELECT * FROM `profile` as p, `signup` as s where p.staff_id=s.id and s.college= '$college' and s.department ='$department'";
 											//$sql = "SELECT * FROM `profile` as p, `signup` as s where p.staff_id=s.id and s.college in ('$college') and s.department in ('$department')";
 											//$sql = "SELECT * FROM `profile`";
 												foreach ($dbh->query($sql) as $row)
@@ -40,10 +40,14 @@ echo $college */
 									  }
 									?>
 									<div class="panel-heading"><center><h3><?php echo $name; ?></h3></center></div>
-									<div><?php echo $sql; ?></div>
+									<!-- <div> -->
+										<?php
+										/*echo $sql; */
+										?>
+									<!-- </div> -->
 									<div class="panel-body"><center><img src="<?php echo $target; ?>" width="100px" height="100px"></center>
 									<br/>
-									<center style="color:green;"><h3><?php echo $row['dept']; ?></h3></center>
+									<center style="color:green;"><h3><?php echo $row['department']; ?></h3></center>
 									<br/>
 									<center><h4><?php echo $row['time_slot'].'min'.' '.'| Availability'; ?></h4> </center>
 									</div>
