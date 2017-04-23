@@ -133,7 +133,7 @@
      
   <p style="font-size: 30px;">SCHEDULE ONLINE. IT'S EASY, FAST AND SECURE</p>
 
-<a href="booking.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
+<a href="booking_selection.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
     </div>
   </div>
 </div>
