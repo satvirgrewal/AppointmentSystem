@@ -163,7 +163,7 @@
       <h1> Schedule your appointment online</h1>
     </div>
 	<div class="col-md-4">
-<a href="booking.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
+<a href="booking_selection.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
 
   </div>
   
