@@ -3,11 +3,11 @@ $(document).ready(function() {
 		$(document).on("click","#login",function()
 		{
 			var u_no=document.getElementById('u_no').value;
-			var user_email=document.getElementById('user_email').value;
+			var password=document.getElementById('password').value;
 
 			$.ajax({
 							type: "POST",
-							url: "ajax/signin_data.php?u_no="+u_no+"&user_email="+user_email,
+							url: "ajax/signin_data.php?u_no="+u_no+"&password="+password,
 							success: function(data)
 							{
 								//alert(data);
@@ -16,12 +16,12 @@ $(document).ready(function() {
 								$('#email').html(data);
 
 								$('#u_no').val('');
-								$('#user_email').val('');
+								$('#password').val('');
 
 							}
 						});
 		});
-		$("#user_email").keyup(function(event){
+		$("#password").keyup(function(event){
 		    if(event.keyCode == 13){
 		        $("#login").click();
 		    }

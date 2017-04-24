@@ -2,17 +2,17 @@
 include('../db/connection.php');
 session_start();
 
-if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
+if(isset($_REQUEST['u_no']) && isset($_REQUEST['password']) )
 {
 	$uin=$_REQUEST['u_no'];
-	$email=$_REQUEST['user_email'];
+	$password=$_REQUEST['password'];
 
 	$_SESSION['u_no'] = $uin;
 
 
-	if(!empty($uin) && !empty($email))
+	if(!empty($uin) && !empty($password))
 	{
-	$s1="SELECT count(uin) as uin,id,type from signup where uin in ('$uin') and email in ('$email')";
+	$s1="SELECT count(uin) as uin,id,type from signup where uin in ('$uin') and pass in ('$password')";
 	foreach ($dbh->query($s1) as $r1)
 		{
 			$uin=$r1['uin'];
@@ -22,7 +22,7 @@ if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
 
 		if($uin == 0 && $id == null)
 		{
-			echo "<script>$('#msg1').html('your UIN or email not valid !!!');</script>";
+			echo "<script>$('#msg1').html('your UIN or password not valid !!!');</script>";
 		}
 		else
 		{
@@ -59,13 +59,13 @@ if(isset($_REQUEST['u_no']) && isset($_REQUEST['user_email']) )
 				echo "<script>$('#uin').html('');</script>";
 			}
 
-			if($email == '')
+			if($password == '')
 			{
-				echo "<script>$('#email').html('please enter email !!!');</script>";
+				echo "<script>$('#password').html('please enter password !!!');</script>";
 			}
 			else
 			{
-				echo "<script>$('#email').html('');</script>";
+				echo "<script>$('#password').html('');</script>";
 			}
 	}
 }

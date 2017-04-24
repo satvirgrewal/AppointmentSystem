@@ -140,8 +140,8 @@
 						<label class="lbl" id='uin'></label>
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" id="user_email"  placeholder="Enter Your Email" required>
-						<label class="lbl" id='email'></label>
+						<input type="password" class="form-control" id="password"  placeholder="Enter Your Password" required>
+						<label class="lbl" id='password'></label>
 					</div>
 			<center>
 
