@@ -114,7 +114,7 @@
     </div>
 </nav>
 <!--   main  -->
-<h1 style="padding-left:25px;text-align:center">Lets book the appointment!!</h1>
+<h1 style="padding-left:25px;text-align:center">Let's book an appointment!!</h1>
 <div class="container-fluid bg-main" style="height:400px;">
   <div class="row">
    <div class="col-md-12" >
