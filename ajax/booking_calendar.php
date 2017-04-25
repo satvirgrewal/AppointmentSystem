@@ -227,7 +227,7 @@ else if(isset($_REQUEST['shift_type'])  && isset($_REQUEST['time']) && isset($_R
 		 $sql="INSERT INTO `student_appoinment`(`staff_id`, `student_id`, `shift_time`, `shift_date`) VALUES ('$staff_id','$std_id','$time','$d')";
 		     if($dbh->query($sql))
 			{
-				echo "<script>$('#msg').html('Appoinment scheduled successfully');</script>";
+				echo "<script>$('#msg').html('Appointment scheduled successfully');</script>";
 			}
 			else
 			{
