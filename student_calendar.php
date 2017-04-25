@@ -80,7 +80,7 @@ if(!isset($_SESSION['id']))
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
             <ul class="nav navbar-nav navbar-center " style="background-color:#009591;margin-top:25px;margin-left:50px;">
-	<li class="navigation   fnt"><a href="booking_selection.php"style="padding-left: 50px;padding-right: 30px;">Appoinment Booking</a></li>
+	<li class="navigation   fnt"><a href="booking_selection.php"style="padding-left: 50px;padding-right: 30px;">Appointment Booking</a></li>
    <li class="navigation   fnt"><a href="student_calendar.php"style="padding-left: 50px;padding-right: 30px;">My Scheduler</a></li>
     <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
    
