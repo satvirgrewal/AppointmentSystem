@@ -98,7 +98,7 @@ h2{
 				<li  ><img src="TAM-Logo.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile">  </li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;margin-top:25px;margin-left:50px;">
+            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;"> <!--margin-top:25px;margin-left:50px; -->
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 50px;
     padding-right: 50px;
@@ -146,7 +146,7 @@ h2{
 <div class="col-md-12">
 
   <br>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-top: 25px; padding-bottom: 25px;height=20px;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
