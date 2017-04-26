@@ -9,22 +9,52 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="main.css" rel="stylesheet" type="text/css">
- 
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- 
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
-	  HEIGHT:50%;
-     
+	  HEIGHT:100%;
+
   }
- 
+  /* start of addition of code */
+  /* Desktop alyout of Howdy Professor */
+#navbar-mobile{
+  display: block;
+}
+h2{
+  font-size: 4em;
+}
+.navbar-center{
+  margin: 25px 0px 0px 25px;
+}
+/* Mobile layout of Howdy Professor */
+@media (max-width: 768px){
+  #navbar-mobile{
+    display: none;
+  }
+  h2{
+    font-size: 2em;
+  }
+  .nav h1 {
+    text-align: center;
+  }
+  .navbar-center{
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+  /* End of addition of code */
+
   </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" min-height: 100%;>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
@@ -65,7 +95,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-left ">
-				<li  ><img src="TAM-Logo.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
+				<li  ><img src="TAM-Logo.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"> id="navbar-mobile" </li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
             <ul class="nav navbar-nav navbar-center" style="background-color:#009591;margin-top:25px;margin-left:50px;">
@@ -73,7 +103,7 @@
     padding-left: 50px;
     padding-right: 50px;
 ">HOME</a></li>
- 
+
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
     padding-right: 50px;
@@ -102,8 +132,8 @@
 ">CONTACT</a></li>
 
     </ul>
-	
-	<ul class="nav navbar-nav navbar-right ">
+
+	<ul class="nav navbar-nav navbar-right "  id="navbar-mobile">
 				<li  ><img src="crono.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
         </div>
@@ -134,7 +164,7 @@
       <div class="item">
         <img src="prof-dev.jpg" class="img-responsive" alt="Chania" >
       </div>
-    
+
       <div class="item">
         <img src="12thman.jpg" class="img-responsive" alt="Flower" >
       </div>
@@ -159,11 +189,11 @@
 </div>
 </div>
 
-  
-  
-  
- <!-- 
-  
+
+
+
+ <!--
+
 <div class="container-fluid bg-grey">
 -->
 <div class="container-fluid">
@@ -171,7 +201,7 @@
   <div class="col-md-12" style="padding-top: 25px;padding-bottom: 75px;">
   <div class="col-md-4">
   </div>
-  
+
   <div class="col-md-4">
       <h2 style="text-align:center"> Say Howdy !!! to your professor</h2>
       <h4 style="text-align:center"> Now scheduling an appointment with your professor is clicks away. The online appointment system is here to help you.
@@ -185,9 +215,9 @@
 
   </div>
 -->
-  
-	
-	
+
+
+
   </div>
 </div>
 </div>
@@ -200,14 +230,14 @@
 		<div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 
 </body>
