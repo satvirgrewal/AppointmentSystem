@@ -27,7 +27,8 @@
   display: block;
 }
 h2{
-  font-size: 4em;
+  font-size: 2em;
+  font-weight: bold;
 }
 .navbar-center{
   margin: 25px 0px 0px 25px;
@@ -100,7 +101,7 @@ h2{
 			</ul>
             <ul class="nav navbar-nav navbar-center" style="background-color:#009591;"> <!--margin-top:25px;margin-left:50px; -->
       <li class="navigation fnt"><a href="index.php" style="
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 50px;
 ">HOME</a></li>
 
@@ -108,7 +109,9 @@ h2{
     padding-left: 20px;
     padding-right: 50px;
 ">ABOUT US</a></li>
-     <li class="dropdown navigation fnt">
+     <li class="dropdown navigation fnt" style="
+   padding-left: 5px;
+   padding-right: 50px;">
         <a class="dropdown-toggle navigation " data-toggle="dropdown" href="#">DEPARTMENT
         <span class="caret"></span></a>
         <ul class="dropdown-menu ">
@@ -146,8 +149,8 @@ h2{
 <div class="col-md-12">
 
   <br>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-top: 25px; padding-bottom: 25px;height=20px;">
-    <!-- Indicators -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+    <!-- Indicators style="padding-top: 25px; padding-bottom: 25px;height=20px;"-->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
