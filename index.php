@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- this part of code uses external css files and viewport porperty to make webpages responsive -->
+  <!-- this part of code uses external css files for styles and viewport porperty to make webpages responsive -->
   <title>Home Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +15,16 @@
 
 
   <style>
+
+  /* this is style block to define how html elements should be rendered in the browser */
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
 	  HEIGHT:100%;
 
   }
-  /* start of addition of code */
-  /* Desktop alyout of Howdy Professor */
+
+  /* Desktop layout of Howdy Professor */
 #navbar-mobile{
   display: block;
 }
@@ -33,13 +35,13 @@ h2{
 .navbar-center{
   margin: 25px 0px 0px 25px;
 }
-/* Mobile layout of Howdy Professor */
+/* Mobile layout of Howdy Professor uses media queries to adjust layout based on the device size */
 @media (max-width: 768px){
   #navbar-mobile{
-    display: none;
+    display: none; /* Only show very important content in mobile version*/
   }
   h2{
-    font-size: 2em;
+    font-size: 2em; /* font weight is not bold in mobile version to make it astetically pleasing */
   }
   .nav h1 {
     text-align: center;
@@ -51,12 +53,12 @@ h2{
   }
 }
 
-  /* End of addition of code */
+  /* End of style formatting of html page */
 
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" min-height: 100%;>
-<div class="container">
+<div class="container"> <!-- Container inside page body  -->
 <div class="row">
 <div class="col-md-12">
 
@@ -68,7 +70,7 @@ h2{
 
 
 
-</div>
+</div> <!-- Division for sign up and sign in button at the top -->
 
 <div class="col-md-4 pull-right" style="padding-bottom:10px;padding-top:10px;">
 
@@ -81,7 +83,7 @@ h2{
 </div>
 </div>
 
-
+<!-- navigation bar that contains A&M logo, mascot, and navigation options for the users -->
 <nav class="navbar navbar-inverse navbar-static-top navi" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -99,20 +101,20 @@ h2{
 				<li  ><img src="TAM-Logo.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile">  </li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;"> <!--margin-top:25px;margin-left:50px; -->
+            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;">
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 20px;
     padding-right: 50px;
-">HOME</a></li>
+">HOME</a></li> <!-- navigation option for home -->
 
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">ABOUT US</a></li>
+">ABOUT US</a></li> <!-- navigation option for about us -->
      <li class="dropdown navigation fnt" style="
    padding-left: 5px;
    padding-right: 50px;">
-        <a class="dropdown-toggle navigation " data-toggle="dropdown" href="#">DEPARTMENT
+        <a class="dropdown-toggle navigation " data-toggle="dropdown" href="#">DEPARTMENT <!-- navigation option for department -->
         <span class="caret"></span></a>
         <ul class="dropdown-menu ">
           <li><a href="mcg.php"  style="
@@ -132,10 +134,10 @@ h2{
       <li class="navigation   fnt"><a href="contact.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">CONTACT</a></li>
+">CONTACT</a></li> <!-- navigation option for contact -->
 
     </ul>
-
+<!-- placement of mascot on navigation bar -->
 	<ul class="nav navbar-nav navbar-right "  id="navbar-mobile">
 				<li  ><img src="crono.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
@@ -143,14 +145,15 @@ h2{
     </div>
 </nav>
 
-
+<!-- container for moving slides below navigation bar -->
 <div class="container" style="line-height:0px;width:100%;">
 <div class="row">
 <div class="col-md-12">
 
   <br>
+  <!-- carousel for moving images/slide show, this will make users to anticipate and spend more time on the website  -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel" >
-    <!-- Indicators style="padding-top: 25px; padding-bottom: 25px;height=20px;"-->
+
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -158,7 +161,7 @@ h2{
       <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
+    <!-- Wrapper for slides, this part contain various images displayed on the slides -->
     <div class="carousel-inner" role="listbox" >
       <div class="item active">
         <img src="home-tamu.jpg" class="img-responsive" alt="Chania" >
@@ -177,7 +180,7 @@ h2{
       </div>
     </div>
 
-    <!-- Left and right controls -->
+    <!-- Left and right controls, for the moving images, to see left and right images by manuallly clicking on the arrows -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -192,13 +195,7 @@ h2{
 </div>
 </div>
 
-
-
-
- <!--
-
-<div class="container-fluid bg-grey">
--->
+<!-- container for part below the moving images, this part displays message to users, makes informal connection and motivates user to use the system -->
 <div class="container-fluid">
   <div class="row">
   <div class="col-md-12" style="padding-top: 25px;padding-bottom: 75px;">
@@ -212,22 +209,11 @@ h2{
          right away and say Howdy !!! to your professor.
       </h4>
     </div>
-<!--
-  <div class="col-md-4">
-<a href="booking.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
-
-  </div>
--->
-
-
-
   </div>
 </div>
 </div>
 
-
-
-
+<!-- fotter bar that displays A&M maroon color that makes emotional connection to users -->
  <div class="navbar navbar-default navbar-fixed-bottom grey">
     <div class="container">
 		<div class="row">
