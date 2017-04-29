@@ -107,7 +107,7 @@
 			</ul>
             <ul class="nav navbar-nav navbar-center" style="background-color:#009591;">
       <li class="navigation fnt"><a href="index.php" style="
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 50px;
 ">HOME</a></li> <!-- navigation option for home -->
 
