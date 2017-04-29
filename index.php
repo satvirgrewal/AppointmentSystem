@@ -13,7 +13,6 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
   <style>
 
   /* this is style block to define how html elements should be rendered in the browser */
@@ -21,7 +20,6 @@
   .carousel-inner > .item > a > img {
       width: 100%;
 	  HEIGHT:100%;
-
   }
 
   /* Desktop layout of Howdy Professor */
@@ -54,7 +52,6 @@ h2{
 }
 
   /* End of style formatting of html page */
-
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" min-height: 100%;>
@@ -64,21 +61,16 @@ h2{
 
 <div class="col-md-4">
 </div>
-
-
 <div class="col-md-4">
-
-
-
 </div> <!-- Division for sign up and sign in button at the top -->
 
-<div class="col-md-4 pull-right" style="padding-bottom:10px;padding-top:10px;">
+    <div class="col-md-4 pull-right" style="padding-bottom:10px;padding-top:10px;">
 
-<a href="signup.php" ><button type="button" class="btn btn-primary">sign up</button></a>
+      <a href="signup.php" ><button type="button" class="btn btn-primary">sign up</button></a>
 
-<a href="signin.php"><button type="button" class="btn btn-primary">sign in</button></a>
+      <a href="signin.php"><button type="button" class="btn btn-primary">sign in</button></a>
 
-</div>
+    </div>
 </div>
 </div>
 </div>
@@ -219,15 +211,10 @@ h2{
 		<div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-
       </p>
 	  </div>
 	  </div>
-
     </div>
-
-
   </div>
-
 </body>
 </html>
