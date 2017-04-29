@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <!-- this part of code uses external css files for styles and viewport porperty to make webpages responsive -->
   <title>Contact Us</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,7 +63,7 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" min-height: 100%; >
-<div class="container">
+<div class="container"> <!-- Container inside page body  -->
 <div class="row">
 <div class="col-md-12">
 
@@ -75,7 +75,7 @@
 
 
 
-</div>
+</div> <!-- Division for sign up and sign in button at the top -->
 
 <div class="col-md-4 pull-right" style="padding-bottom:10px;padding-top:10px;">
 
@@ -87,7 +87,7 @@
 </div>
 </div>
 </div>
-
+<!-- navigation bar that contains A&M logo, mascot, and navigation options for the users -->
 <nav class="navbar navbar-inverse navbar-static-top navi" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -109,14 +109,14 @@
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 50px;
     padding-right: 50px;
-">HOME</a></li>
+">HOME</a></li> <!-- navigation option for home -->
 
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">ABOUT US</a></li>
+">ABOUT US</a></li> <!-- navigation option for About us -->
      <li class="dropdown navigation fnt">
-        <a class="dropdown-toggle navigation " data-toggle="dropdown" href="#">DEPARTMENT
+        <a class="dropdown-toggle navigation " data-toggle="dropdown" href="#">DEPARTMENT <!-- navigation option for department -->
         <span class="caret"></span></a>
         <ul class="dropdown-menu ">
           <li><a href="mcg.php"  style="
@@ -136,17 +136,17 @@
       <li class="navigation   fnt"><a href="contact.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">CONTACT</a></li>
+">CONTACT</a></li> <!-- navigation option for Contact -->
 
     </ul>
-
+<!-- placement of mascot on navigation bar -->
 	<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" ></li>
 			</ul>
         </div>
     </div>
 </nav>
-<!--   main  -->
+<!--   main page content for signup form -->
 <h1 style="padding-left:25px; text-align:center">Sign Up Form</h1>
 <div class="container-fluid bg-main" style="height:800px;">
   <div class="row">
@@ -167,6 +167,7 @@
         <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">Enter Your Details</h3>
 					<div class="form-group">
+            <!-- select option for user type either student or staff -->
 						<select class="form-control input-sm" id="type" >
 								<option selected="default" value='0' disabled>---Select User Type---</option>
 									<option value='1' >Student</option>
@@ -201,6 +202,7 @@
 						<label class="lbl" id="p2"></label>
 					</div>
 
+          <!-- select option for college, shows list of colleges available -->
           <div class="form-group">
 						<select class="form-control input-sm" id="college" >
 								<option selected="default" value='0' disabled>---Select your college---</option>
@@ -212,7 +214,7 @@
 
 							<label class="lbl" id="c"></label>
 					</div>
-
+          <!-- select option for deartment, shows list of departments available -->
           <div class="form-group">
 						<select class="form-control input-sm" id="department" >
 								<option selected="default" value='0' disabled>---Select your department---</option>
@@ -227,29 +229,12 @@
 							<label class="lbl" id="d"></label>
 					</div>
 
-
-<!--
-          <div class="form-group">
-            <input type="text" class="form-control" id="college" name="college" placeholder="Enter Your college" required>
-            <label class="lbl" id="c"></label>
-          </div>
-
-
-
-          <div class="form-group">
-            <input type="text" class="form-control" id="department" name="department" placeholder="Enter Your department" required>
-            <label class="lbl" id="d"></label>
-          </div>
--->
           <div class="form-group">
         <button type="button" id="signup_save" class="btn btn-primary " >Save</button>
 		<label id="msg" style="color:blue;"></label>
 		</div>
-
         </form>
-
     </div>
-
     </div>
 	<div class="col-sm-4">
 	</div>
@@ -257,24 +242,20 @@
 </div>
 </div>
 
+<!--   main content of signup form over -->
 
-<!--   main over -->
-
+<!-- footer bar that displays A&M maroon color that makes emotional connection to users -->
   <div class="navbar navbar-default navbar-fixed-bottom grey">
     <div class="container">
       <div class="row">
 		<div class="col-md-12">
-      <p class="navbar-text pull-left" >
-
+      <p class="navbar-text pull-left"
       </p>
 	  </div>
 	  </div>
-
     </div>
-
-
   </div>
-<!-- page script -->
+<!-- page script to execute when form is submitted -->
 
 <script src="js/signup.js"></script>
 

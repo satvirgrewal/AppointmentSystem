@@ -93,7 +93,7 @@ h2{
 				<li  ><img src="TAM-Logo.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile">  </li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;">
+            <ul class="nav navbar-nav navbar-center" style="background-color:#009591; margin-top:25px;margin-left:50px;">
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 20px;
     padding-right: 50px;
@@ -205,7 +205,7 @@ h2{
 </div>
 </div>
 
-<!-- fotter bar that displays A&M maroon color that makes emotional connection to users -->
+<!-- footer bar that displays A&M maroon color that makes emotional connection to users -->
  <div class="navbar navbar-default navbar-fixed-bottom grey">
     <div class="container">
 		<div class="row">
