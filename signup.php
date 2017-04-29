@@ -105,7 +105,7 @@
 				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile"></li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;margin-top:25px;margin-left:50px;">
+            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;">
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 50px;
     padding-right: 50px;
@@ -115,7 +115,10 @@
     padding-left: 20px;
     padding-right: 50px;
 ">ABOUT US</a></li> <!-- navigation option for About us -->
-     <li class="dropdown navigation fnt">
+        <li class="dropdown navigation fnt" style="
+        padding-left: 5px;
+        padding-right: 50px;">
+
         <a class="dropdown-toggle navigation " data-toggle="dropdown" href="#">DEPARTMENT <!-- navigation option for department -->
         <span class="caret"></span></a>
         <ul class="dropdown-menu ">
