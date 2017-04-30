@@ -168,7 +168,7 @@
             <select class="form-control input-sm" id="college" >
                 <option selected="default" value='0' disabled>---Select your college---</option>
                   <option value='Mays Business School' >Mays Business School</option>
-                  <option  value='Dwight Look College' >Dwight Look College of Engineering</option>
+                  <option  value='Dwight Look College of Engineering' >Dwight Look College of Engineering</option>
                   <option  value='Other' >Other</option>
 
               </select>
