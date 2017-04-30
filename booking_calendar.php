@@ -1,7 +1,7 @@
 <?php
 include('db/connection.php');
 session_start();
-if(!isset($_SESSION['id']))
+if(!isset($_SESSION['id'])) // If user is not signed in then redirect to sign in page
 {
 	header("Location: signin.php");
 }
@@ -9,6 +9,9 @@ if(!isset($_SESSION['id']))
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- this part of code uses external css files for styles and viewport porperty to make webpages responsive -->
+	<!-- This page contains calendar to select date on which user want to book an appoinment and can select shift and time for an appoinment -->
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Staff Schedule</title>
@@ -54,6 +57,36 @@ if(!isset($_SESSION['id']))
   .lbl{
 	  color:red;
   }
+
+	/* Desktop layout of Howdy Professor */
+#navbar-mobile{
+	display: block;
+}
+h2{
+	font-size: 2em;
+	font-weight: bold;
+}
+.navbar-center{
+	margin: 25px 0px 0px 25px;
+}
+/* Mobile layout of Howdy Professor uses media queries to adjust layout based on the device size */
+@media (max-width: 768px){
+	#navbar-mobile{
+		display: none; /* Only show very important content in mobile version*/
+	}
+	h2{
+		font-size: 2em; /* font weight is not bold in mobile version to make it astetically pleasing */
+	}
+	.nav h1 {
+		text-align: center;
+	}
+	.navbar-center{
+		margin-left: 0px;
+		width: 100%;
+		height: 100%;
+	}
+}
+	/* End of style formatting of html page */
   </style>
 
 
@@ -67,16 +100,16 @@ if(!isset($_SESSION['id']))
 
     </div>
 	<ul class="nav navbar-nav navbar-left ">
-				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
+				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile"></li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-    <ul class="nav navbar-nav navbar-center " style="background-color:#009591;margin-top:25px;margin-left:50px;">
+    <ul class="nav navbar-nav navbar-center " style="background-color:#009591;">
 	<li class="navigation   fnt" ><a href="booking_selection.php"style="padding-left: 50px;padding-right: 30px;">Appointment Booking</a></li>
    <li class="navigation   fnt" ><a href="student_calendar.php"style="padding-left: 50px;padding-right: 30px;">My Scheduler</a></li>
     <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
 
     </ul>
-	<ul class="nav navbar-nav navbar-right ">
+	<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
   </div>
