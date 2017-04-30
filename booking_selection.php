@@ -29,7 +29,6 @@
 	 color:red;
  }
 
-
      /* Desktop layout of Howdy Professor */
    #navbar-mobile{
      display: block;
@@ -186,6 +185,7 @@
                   <option value='Computer Science' >Computer Science</option>
                   <option  value='Civil Engineering' >Civil Engineering</option>
                   <option  value='Aerospace Engineering' >Aerospace Engineering</option>
+                  <option  value='Other' >Other</option>
               </select>
 
               <label class="lbl" id="d"></label>
