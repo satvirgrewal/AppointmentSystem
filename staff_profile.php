@@ -152,9 +152,9 @@ if(isset($_SESSION['id']))
 	<div class="form-group">
 						<label>Select Department</label>
 						<select class="form-control input-sm" id="dept" >
-								<option selected="default" value='NA' disabled>---Select YOur Department---</option>
+								<option selected="default" value='NA' disabled>---Select Your Department---</option>
 									<option value='Mays Business School' >Mays Business School</option>
-									<option  value='Dwight Look College of Engineering' >Dwight Look College</option>
+									<option  value='Dwight Look College of Engineering' >Dwight Look College of Engineering</option>
 									<option  value='Others' >Other</option>
 
 
