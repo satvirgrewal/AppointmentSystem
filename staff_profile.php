@@ -12,7 +12,7 @@ if(!isset($_SESSION['id']))
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Staff Profile</title>
-  
+
    <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -23,7 +23,7 @@ if(!isset($_SESSION['id']))
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
    <!-- DataTables -->
   <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
- 
+
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -46,7 +46,7 @@ if(!isset($_SESSION['id']))
 	  color:red;
   }
   </style>
-  
+
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -87,23 +87,23 @@ if(!isset($_SESSION['id']))
 </div>
 <!--   main  -->
   <!-- Main content -->
-		
+
     <section class="content">
       <div class="row">
 		<div class="col-md-3">
 			<?php
 if(isset($_SESSION['id']))
 {
-	
+
 											$sql = "SELECT * FROM `profile` where staff_id='".$_SESSION['id']."'";
 												foreach ($dbh->query($sql) as $row)
 												{
 													//$user_id=$row['user_id'];
-													
+
 													$target='upload_image/'.$row['file'];
 													//$targetPath = $_SERVER['DOCUMENT_ROOT'].'/harsh/'.'upload_image/'.$row['file'];
-													
-										?>										
+
+										?>
 										<div class="col-md-12">
 			                               <div class="panel panel-default">
 									<?php
@@ -125,15 +125,15 @@ if(isset($_SESSION['id']))
 									</center>
 									</div>
 									</div>
-									
-									
-								
+
+
+
 								<?php
-								
+
 										}
-								?>	   
-	
-								
+								?>
+
+
 
 	<?php
 }
@@ -145,25 +145,25 @@ if(isset($_SESSION['id']))
 			<div class="box-header with-border">
               <h3 class="box-title">Enter Your Details</h3>
             </div>
-			
+
             <div class="box-body">
-			
+
 				<div class="col-sm-3">
 	<div class="form-group">
 						<label>Select Department</label>
 						<select class="form-control input-sm" id="dept" >
 								<option selected="default" value='NA' disabled>---Select YOur Department---</option>
 									<option value='Mays Business School' >Mays Business School</option>
-									<option  value='Dwight Look College of Engineering' >Dwight Look College of Engineering</option>
-									<option  value='Others' >Others</option>
-									
-							
+									<option  value='Dwight Look College of Engineering' >Dwight Look College</option>
+									<option  value='Others' >Other</option>
+
+
 							</select>
 							<label class="lbl" id="s"></label>
 					</div>
 	</div>
-				
-			
+
+
 			<!--	<div class="col-md-4">
 					<div class="form-group">
 							<label>Date:</label>
@@ -175,7 +175,7 @@ if(isset($_SESSION['id']))
 								</div>
 					</div>
 				</div>  -->
-				
+
 				<div class="col-sm-3">
 	<div class="form-group">
 					<label>Name</label>
@@ -194,10 +194,10 @@ if(isset($_SESSION['id']))
 									<option  value='Thr' >Thr</option>
 									<option  value='Fri' >Fri</option>
 									<option  value='Sat' >Sat</option>
-									
-							
+
+
 							</select>
-							
+
 		</div>
 		<label class="lbl" id="f"></label>
 	</div>
@@ -212,35 +212,35 @@ if(isset($_SESSION['id']))
 									<option  value='Thr' >Thr</option>
 									<option  value='Fri' >Fri</option>
 									<option  value='Sat' >Sat</option>
-									
-							
+
+
 							</select>
 							</div>
 							<label class="lbl" id="t"></label>
 	</div>
-				
+
 	<div class="col-sm-2">
 	<div class="form-group">
 		<label>Time slot</label>
 						<select class="form-control input-sm col-sm-4" id="t_slot" >
 								<option selected="default" value='NA' disabled>---Select Day---</option>
 									<option value='30' >30</option>
-									
-							
+
+
 							</select>
 							</div>
 							<label class="lbl" id="t_s"></label>
-	</div>			
-				
-				
-				
-				
+	</div>
+
+
+
+
 			</div>
 			<div class="box-body">
-			
+
 			<div class="col-md-2">
 						<div class="bootstrap-timepicker">
-             
+
 							<div class="form-group">
 							  <label>Morning start time</label>
 
@@ -257,7 +257,7 @@ if(isset($_SESSION['id']))
 					</div>
 					<div class="col-md-2">
 						<div class="bootstrap-timepicker">
-             
+
 							<div class="form-group">
 							  <label>Morning end time</label>
 
@@ -274,7 +274,7 @@ if(isset($_SESSION['id']))
 					</div>
 					<div class="col-md-2">
 						<div class="bootstrap-timepicker">
-             
+
 							<div class="form-group">
 							  <label>Afternoon start time</label>
 
@@ -291,7 +291,7 @@ if(isset($_SESSION['id']))
 					</div>
 					<div class="col-md-2">
 						<div class="bootstrap-timepicker">
-             
+
 							<div class="form-group">
 							  <label>Afternoon end time</label>
 
@@ -308,7 +308,7 @@ if(isset($_SESSION['id']))
 					</div>
 					<div class="col-md-2">
 						<div class="bootstrap-timepicker">
-             
+
 							<div class="form-group">
 							  <label>Evening start time</label>
 
@@ -325,7 +325,7 @@ if(isset($_SESSION['id']))
 					</div>
 					<div class="col-md-2">
 						<div class="bootstrap-timepicker">
-             
+
 							<div class="form-group">
 							  <label>Evening end time</label>
 
@@ -340,52 +340,52 @@ if(isset($_SESSION['id']))
 							</div>
 						<label class="lbl" id="e_e"></label>
 					</div>
-			
+
 			</div>
-			
+
 			<div class="box-body">
-			
+
 			<div class="col-md-8">
 			<form id="uploadForm" action="ajax/profile_data.php" method="post">
 				<div class="col-md-6">
-				
+
 							<label>Upload File</label>
-							
+
 									<input type="file" class="form-control input-sm" id="userImage"  name="userImage"  >
-									
+
 									<input type="hidden" id="file1" value="">
-				
-				</div> 
+
+				</div>
 				<div class="col-md-6">
 				<br/>
-					<input type="submit" value="Submit" class=" btn btn-success btnSubmit" />		
-				</div> 
+					<input type="submit" value="Submit" class=" btn btn-success btnSubmit" />
+				</div>
 				<label style="color:blue;" id="file_up"></label>
-				</form>	
+				</form>
 			</div>
 			</div>
-			
-			<div class="box-body">	
+
+			<div class="box-body">
 			</div>
 			<center>
               <div class="box-footer">
                 <button type="button" class="btn btn-primary"  id="save">Save</button>
-				
-                
+
+
 								</div>
 								<label id="msg" style="color:blue;"></label>
 								</center>
-			
+
 			</div>
          </div>
 		</div>
-		
+
 		<!-- /.End of Form -->
-		
+
     </section>
    <!-- /.content -->
-	
- 
+
+
 
 <!--   main over -->
 
@@ -394,14 +394,14 @@ if(isset($_SESSION['id']))
       <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 <!-- jQuery 2.2.3 -->
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
@@ -427,43 +427,43 @@ if(isset($_SESSION['id']))
 <script>
  //Date picker
 
-  $(function(){  
+  $(function(){
 	//Timepicker
     $("#m_start").timepicker({
       showInputs: false
     });
-	
+
 	//Timepicker
     $("#m_end").timepicker({
       showInputs: false
     });
-	
+
 	$("#a_start").timepicker({
       showInputs: false
     });
-	
+
 	//Timepicker
     $("#a_end").timepicker({
       showInputs: false
     });
-	
+
 	$("#e_start").timepicker({
       showInputs: false
     });
-	
+
 	//Timepicker
     $("#e_end").timepicker({
       showInputs: false
     });
   });
-	
+
 	</script>
 	<script>
-	
-	
-		
+
+
+
   $("#uploadForm").on('submit',(function(e) {
-			
+
 			//alert('hi');
 		e.preventDefault();
 		$.ajax({
@@ -475,12 +475,12 @@ if(isset($_SESSION['id']))
 			processData:false,
 			success: function(data)
 		    {
-				
+
 			$("#file_up").html(data);
 		    },
-		  	error: function() 
+		  	error: function()
 	    	{
-	    	} 	        
+	    	}
 	   });
 	}));
   </script>
