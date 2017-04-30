@@ -191,7 +191,7 @@ else // if user is signed in and autheticated from the session id then show list
     <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
 
     </ul>
-	<ul class="nav navbar-nav navbar-right ">
+	<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
         </div>
@@ -203,7 +203,8 @@ else // if user is signed in and autheticated from the session id then show list
 }
 ?>
 
-    <!-- Main content -->
+    <!-- Main content that shows list of professors based on the
+    college and department selected on the previous page to book an appoinment-->
 
     <section class="content">
 
@@ -249,14 +250,10 @@ else // if user is signed in and autheticated from the session id then show list
       <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-
       </p>
 	  </div>
 	  </div>
-
     </div>
-
-
   </div>
 
   <!-- Add the sidebar's background. This div must be placed
