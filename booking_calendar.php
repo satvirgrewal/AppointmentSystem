@@ -1,7 +1,7 @@
 <?php
 include('db/connection.php');
 session_start();
-if(!isset($_SESSION['id'])) // If user is not signed in then redirect to the sign in page
+if(!isset($_SESSION['id']))
 {
 	header("Location: signin.php");
 }
@@ -9,9 +9,6 @@ if(!isset($_SESSION['id'])) // If user is not signed in then redirect to the sig
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- this part of code uses external css files for styles and viewport porperty to make webpages responsive -->
-  <!-- This page contains calendar to book an appoinment with the selected Professor -->
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Staff Schedule</title>
@@ -50,41 +47,13 @@ if(!isset($_SESSION['id'])) // If user is not signed in then redirect to the sig
 	  left:50px;
   }
 
+
   .fc-week{
 		height:100px !important;
   }
   .lbl{
 	  color:red;
   }
-	/* Desktop layout of Howdy Professor */
-#navbar-mobile{
-	display: block;
-}
-h2{
-	font-size: 2em;
-	font-weight: bold;
-}
-.navbar-center{
-	margin: 25px 0px 0px 25px;
-}
-/* Mobile layout of Howdy Professor uses media queries to adjust layout based on the device size */
-@media (max-width: 768px){
-	#navbar-mobile{
-		display: none; /* Only show very important content in mobile version*/
-	}
-	h2{
-		font-size: 2em; /* font weight is not bold in mobile version to make it astetically pleasing */
-	}
-	.nav h1 {
-		text-align: center;
-	}
-	.navbar-center{
-		margin-left: 0px;
-		width: 100%;
-		height: 100%;
-	}
-}
-	/* End of style formatting of html page */
   </style>
 
 
@@ -98,16 +67,16 @@ h2{
 
     </div>
 	<ul class="nav navbar-nav navbar-left ">
-				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px; " id="navbar-mobile"></li>
+				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-    <ul class="nav navbar-nav navbar-center " style="background-color:#009591;">
+    <ul class="nav navbar-nav navbar-center " style="background-color:#009591;margin-top:25px;margin-left:50px;">
 	<li class="navigation   fnt" ><a href="booking_selection.php"style="padding-left: 50px;padding-right: 30px;">Appointment Booking</a></li>
    <li class="navigation   fnt" ><a href="student_calendar.php"style="padding-left: 50px;padding-right: 30px;">My Scheduler</a></li>
     <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
 
     </ul>
-	<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
+	<ul class="nav navbar-nav navbar-right ">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
   </div>
@@ -131,6 +100,8 @@ h2{
               <div id="calendar"></div>
 			  <br/>
 
+
+
 			</div>
             <!-- /.box-body -->
           </div>
@@ -138,7 +109,7 @@ h2{
         </div>
 		<div class="col-md-3">
 			<?php
-if(isset($_GET['id'])) // select Professor data based on Professor id and insert data in Database for an appoinment
+if(isset($_GET['id']))
 {
 
 											$sql = "SELECT * FROM `profile` where staff_id='".$_GET['id']."'";
@@ -172,10 +143,15 @@ if(isset($_GET['id'])) // select Professor data based on Professor id and insert
 									</div>
 									</div>
 
+
+
 								<?php
 
 										}
 								?>
+
+
+
 	<?php
 }
 ?>
@@ -207,8 +183,7 @@ if(isset($_GET['id'])) // select Professor data based on Professor id and insert
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
 
-      <!-- Modal content: when date is selected from the calendar then
-			show pop up window to select shift and time for booking an appoinment-->
+      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -231,6 +206,9 @@ if(isset($_GET['id'])) // select Professor data based on Professor id and insert
 			<div class="col-md-12">
 				<div class="form-group">
 					<select class="form-control input-sm" id="time" >
+
+
+
 							</select>
 				</div>
 				<label id="tm" class="lbl"></label>
@@ -279,6 +257,7 @@ if(isset($_GET['id'])) // select Professor data based on Professor id and insert
     function ini_events(ele) {
       ele.each(function () {
 
+        // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
         // it doesn't need to have a start or end
         var eventObject = {
           title: $.trim($(this).text()) // use the element's text as the event title
@@ -318,7 +297,38 @@ if(isset($_GET['id'])) // select Professor data based on Professor id and insert
         week: 'week',
         day: 'day'
       },
+      //Random default events
+   /*    events: [
 
+      ],
+      editable: true,
+      droppable: true, // this allows things to be dropped onto the calendar !!!
+      drop: function (date, allDay) { // this function is called when something is dropped
+
+        // retrieve the dropped element's stored Event Object
+        var originalEventObject = $(this).data('eventObject');
+
+        // we need to copy it, so that multiple events don't have a reference to the same object
+        var copiedEventObject = $.extend({}, originalEventObject);
+
+        // assign it the date that was reported
+        copiedEventObject.start = date;
+        copiedEventObject.allDay = allDay;
+        copiedEventObject.backgroundColor = $(this).css("background-color");
+        copiedEventObject.borderColor = $(this).css("border-color");
+
+        // render the event on the calendar
+        // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+
+        // is the "remove after drop" checkbox checked?
+        if ($('#drop-remove').is(':checked')) {
+          // if so, remove the element from the "Draggable Events" list
+          $(this).remove();
+        }
+
+      }
+    }); */
 
 	dayClick: function(date, jsEvent, view) {
 		  var dt=date.format();
@@ -333,8 +343,18 @@ if(isset($_GET['id'])) // select Professor data based on Professor id and insert
 		$("#date").text('Selected Date:' + dt);
 		//alert(date.format());
 		$("#myModal").modal();/*
+        alert('Clicked on: ' + date.format());
+
+        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+
+        alert('Current view: ' + view.name);
+
+        // change the day's background color just for fun
+        $(this).css('background-color', 'red');*/
+
     }
     });
+
 
     /* ADDING EVENTS */
     var currColor = "#3c8dbc"; //Red by default
@@ -409,5 +429,7 @@ if(isset($_GET['id'])) // select Professor data based on Professor id and insert
 	});
   });
 </script>
+
+
 </body>
 </html>
