@@ -145,8 +145,8 @@ else if(is_array($_FILES)) {
 			{
 				$sourcePath = $_FILES['userImage']['tmp_name'];
 				//mkdir($_SERVER['DOCUMENT_ROOT'].'/harsh/'.'upload_image/'.$_SESSION['id']);
-				//$targetPath = $_SERVER['DOCUMENT_ROOT'].'/harsh/'.'upload_image/'.$_FILES['userImage']['name'];
-        $targetPath=$_SERVER['DOCUMENT_ROOT'].'/AppointmentSystem/'.'upload_image/'.$_FILES['userImage']['name'];
+				$targetPath = $_SERVER['DOCUMENT_ROOT'].'/harsh/'.'upload_image/'.$_FILES['userImage']['name'];
+        //$targetPath=$_SERVER['DOCUMENT_ROOT'].'/AppointmentSystem/'.'upload_image/'.$_FILES['userImage']['name'];
 
 
         if(move_uploaded_file($sourcePath,$targetPath))
@@ -156,7 +156,7 @@ else if(is_array($_FILES)) {
 				}
 				else
 				{
-					echo "<script>$('#file_up').html('Error to upload upload !!!');</script>";
+					echo "<script>$('#file_up').html('Error to upload image !!!');</script>";
 				}
 			}
 }
