@@ -150,6 +150,7 @@
    <div class="col-md-12" style="
     padding-top: 30px;
     padding-bottom: 20px;
+    margin-bottom: 60px;
 ">
 
     <div class="col-sm-4" style="
@@ -158,13 +159,14 @@
     padding-left: 50px;
     padding-right: 50px;
 ">
-      <img id="mcg" class="img-responsive" src="school.jpg" style="width: 412px; height: 282px; ">
+      <img id="mcg" class="img-responsive" src="Texas-AM-Photo.jpg" style="width: 412px; height: 282px; ">
     </div>
     <div class="col-sm-8" style="
     padding-top: 50px;
+    padding-left: 50px;
 ">
-
-  <p style="font-size: 30px;">Schedule Online. It's Easy, Fast and Secure</p>
+  <p style="font-size: 20px;">Texas A&M University’s Mays Business School educates more than 6,000 undergraduate, master’s and doctoral students in accounting, finance, management of information systems, management, marketing and supply chain management. The school consistently ranks among the top public business schools.</p>
+  <p style="font-size: 30px;">Schedule online. It's easy, fast and secure</p>
 
 <a href="booking_selection.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
     </div>

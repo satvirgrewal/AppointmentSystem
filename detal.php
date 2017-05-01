@@ -148,6 +148,7 @@ h2{
    <div class="col-md-12" style="
     padding-top: 30px;
     padding-bottom: 20px;
+    margin-bottom: 60px;
 ">
 
     <div class="col-sm-4" style="
@@ -156,18 +157,24 @@ h2{
     padding-left: 50px;
     padding-right: 50px;
 ">
-      <img id="comp-iiro2w7vimgimage"class="img-responsive" src="school.jpg" style="width: 412px; height: 282px; ">
+      <img id="comp-iiro2w7vimgimage"class="img-responsive" src="PEAP_Building.jpg" style="width: 412px; height: 282px; ">
     </div>
     <div class="col-sm-8" style="
     padding-top: 50px;
-">
+    padding-left: 50px;
 
+">
+<p
+style="
+font-size: 20px;
+">
+Engineering has been a part of Texas A&M University since its inception in 1876 as the Agricultural and Mechanical College of Texas. Today, the College of Engineering is the largest college on the Texas A&M campus with more than 500 faculty members and more than 18,000 engineering students in our 14 departments.</p>
   <p
 style="
  font-size: 30px;
-">Schedule Online. It's Easy, Fast and Secure</p>
+">Schedule online. It's easy, fast and secure</p>
 
-<a href="booking_selection.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
+<a href="booking_selection.php">	<button type="button"  class="btn btnn btn-primary pull-center">Book An Appointment</button></a>
     </div>
   </div>
 </div>
