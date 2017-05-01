@@ -130,7 +130,7 @@
       <li class="navigation   fnt"><a href="contact.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">Contact</a></li>
+">CONTACT</a></li>
 
     </ul>
 

@@ -102,7 +102,7 @@
       <li class="navigation fnt"><a href="index.php" style="
     padding-left: 20px;
     padding-right: 50px;
-">Home</a></li>
+">HOME</a></li>
 
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
@@ -131,7 +131,7 @@
       <li class="navigation   fnt"><a href="contact.php"style="
     padding-left: 20px;
     padding-right: 50px;
-">Contact</a></li>
+">CONTACT</a></li>
 
     </ul>
 
