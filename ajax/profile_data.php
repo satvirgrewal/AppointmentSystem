@@ -17,10 +17,10 @@ session_start();
 
 else if(isset($_REQUEST['dept'])  && isset($_REQUEST['frm']) && isset($_REQUEST['to']) && isset($_REQUEST['t_slot']) && isset($_REQUEST['m_start']) && isset($_REQUEST['m_end']) && isset($_REQUEST['a_start']) && isset($_REQUEST['a_end']) && isset($_REQUEST['e_start']) && isset($_REQUEST['e_end']) )
 {
-	
-	
+
+
 	$dept=$_REQUEST['dept'];
-	
+
 	$frm=$_REQUEST['frm'];
 	$to=$_REQUEST['to'];
 	$t_slot=$_REQUEST['t_slot'];
@@ -31,13 +31,13 @@ else if(isset($_REQUEST['dept'])  && isset($_REQUEST['frm']) && isset($_REQUEST[
 	$e_start=$_REQUEST['e_start'];
 	$e_end=$_REQUEST['e_end'];
 	$file=$_REQUEST['file'];
-	
+
 	if($dept != 'NA'  && $frm != 'NA' && $to != 'NA' && $t_slot != 'NA' && !empty($file)) //&& !empty($m_start) && !empty($m_end) && !empty($a_start) && !empty($a_end) && !empty($e_start) && !empty($e_end) && !empty($file))
 	{
-		
-		
-			$sql = "INSERT INTO `profile`(`staff_id`, `dept`, `from_day`, `to_day`, `time_slot`, `mor_start`, `mor_end`, `aft_start`, `aft_end`, `eve_start`, `eve_end`, `file`) VALUES ('".$_SESSION['id']."','$dept','$frm','$to','$t_slot','$m_start','$m_end','$a_start','$a_end','$e_start','$e_end','$file')";		
-			
+
+
+			$sql = "INSERT INTO `profile`(`staff_id`, `dept`, `from_day`, `to_day`, `time_slot`, `mor_start`, `mor_end`, `aft_start`, `aft_end`, `eve_start`, `eve_end`, `file`) VALUES ('".$_SESSION['id']."','$dept','$frm','$to','$t_slot','$m_start','$m_end','$a_start','$a_end','$e_start','$e_end','$file')";
+
 			if($dbh->query($sql))
 			{
 				echo "<script>$('#msg').html('Data Save Successfully');</script>";
@@ -46,23 +46,23 @@ else if(isset($_REQUEST['dept'])  && isset($_REQUEST['frm']) && isset($_REQUEST[
 			{
 				echo "<script>$('#msg').html('Error To Save Data');</script>";
 			}
-		
-		
+
+
 	}
 	else
 	{
 			if($dept == 0)
 			{
-				
+
 					echo "<script>$('#s').html('please select department !!!');</script>";
 			}
 			else
 			{
 				echo "<script>$('#s').html('');</script>";
 			}
-			
-			
-			
+
+
+
 			if($frm == 0)
 			{
 				echo "<script>$('#f').html('please select  from day !!!');</script>";
@@ -136,17 +136,20 @@ else if(isset($_REQUEST['dept'])  && isset($_REQUEST['frm']) && isset($_REQUEST[
 				echo "<script>$('#e_e').html('');</script>";
 			}
 	}
-	
 
-	
+
+
 }
 else if(is_array($_FILES)) {
-			if(is_uploaded_file($_FILES['userImage']['tmp_name'])) 
+			if(is_uploaded_file($_FILES['userImage']['tmp_name']))
 			{
 				$sourcePath = $_FILES['userImage']['tmp_name'];
 				//mkdir($_SERVER['DOCUMENT_ROOT'].'/harsh/'.'upload_image/'.$_SESSION['id']);
-				$targetPath = $_SERVER['DOCUMENT_ROOT'].'/harsh/'.'upload_image/'.$_FILES['userImage']['name'];
-				if(move_uploaded_file($sourcePath,$targetPath))
+				//$targetPath = $_SERVER['DOCUMENT_ROOT'].'/harsh/'.'upload_image/'.$_FILES['userImage']['name'];
+        $targetPath=$_SERVER['DOCUMENT_ROOT'].'/AppointmentSystem/'.'upload_image/'.$_FILES['userImage']['name'];
+
+
+        if(move_uploaded_file($sourcePath,$targetPath))
 				{
 					echo "<script>$('#file_up').html('File upload succesfully !!!');</script>";
 
