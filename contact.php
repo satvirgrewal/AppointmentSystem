@@ -22,7 +22,36 @@
 	  HEIGHT:50%;
 
   }
+  /* Desktop layout of Howdy Professor */
+#navbar-mobile{
+  display: block;
+}
+h2{
+  font-size: 2em;
+  font-weight: bold;
+}
+.navbar-center{
+  margin: 25px 0px 0px 25px;
+}
+/* Mobile layout of Howdy Professor uses media queries to adjust layout based on the device size */
+@media (max-width: 768px){
+  #navbar-mobile{
+    display: none; /* Only show very important content in mobile version*/
+  }
+  h2{
+    font-size: 2em; /* font weight is not bold in mobile version to make it astetically pleasing */
+  }
+  .nav h1 {
+    text-align: center;
+  }
+  .navbar-center{
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
 
+  /* End of style formatting of html page */
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">

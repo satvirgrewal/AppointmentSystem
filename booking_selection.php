@@ -4,7 +4,7 @@
 <head>
   <!-- this part of code uses external css files for styles and viewport porperty to make webpages responsive -->
   <!-- This page contains form to select college and department of the professor for booking an appoinment -->
-  <title>Bokking Selection</title>
+  <title>Booking Selection</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
