@@ -29,35 +29,65 @@ if(!isset($_SESSION['id']))
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <link href="main.css" rel="stylesheet" type="text/css">
- 
+
   <style>
   .fc-other-month #any,.fc-other-month #a ,.fc-other-month .block ,.fc-other-month #b{
 	  display:none;
   }
-  
+
   .a{
 	  position: absolute;
 	 top:50px;
 	  left:50px;
-	  
+
   }
   .b{
 	  position: absolute;
 	  top:70px;
 	  left:50px;
   }
- 
-  
+
+
   .fc-week{
 		height:100px !important;
   }
   .fc-time{
    display : none;
 }
-  
+
+/* Desktop layout of Howdy Professor */
+#navbar-mobile{
+display: block;
+}
+h2{
+font-size: 2em;
+font-weight: bold;
+}
+.navbar-center{
+margin: 25px 0px 0px 25px;
+}
+/* Mobile layout of Howdy Professor uses media queries to adjust layout based on the device size */
+@media (max-width: 768px){
+#navbar-mobile{
+	display: none; /* Only show very important content in mobile version*/
+}
+h2{
+	font-size: 2em; /* font weight is not bold in mobile version to make it astetically pleasing */
+}
+.nav h1 {
+	text-align: center;
+}
+.navbar-center{
+	margin-left: 0px;
+	width: 100%;
+	height: 100%;
+}
+}
+
+/* End of style formatting of html page */
   </style>
 
-  
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="row">
@@ -76,16 +106,16 @@ if(!isset($_SESSION['id']))
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-left ">
-				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
+				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile"></li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-center " style="background-color:#009591;margin-top:25px;margin-left:50px;">
+            <ul class="nav navbar-nav navbar-center " style="background-color:#009591;">
 	<li class="navigation   fnt"><a href="booking_selection.php"style="padding-left: 50px;padding-right: 30px;">Appointment Booking</a></li>
    <li class="navigation   fnt"><a href="student_calendar.php"style="padding-left: 50px;padding-right: 30px;">My Scheduler</a></li>
     <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
-   
+
     </ul>
-	<ul class="nav navbar-nav navbar-right ">
+	<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
         </div>
@@ -97,11 +127,11 @@ if(!isset($_SESSION['id']))
 <h1 style="padding-left:25px;">My Scheduler</h1>
 <div class="wrapper" style="    background-color:white;">
 
-   
+
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        
+
         <!-- /.col -->
         <div class="col-md-12" >
           <div class="box box-primary">
@@ -109,41 +139,41 @@ if(!isset($_SESSION['id']))
               <!-- THE CALENDAR -->
               <div id="calendar"></div>
 			  <br/>
-			   
-			  
-				
+
+
+
 			</div>
             <!-- /.box-body -->
           </div>
           <!-- /. box -->
         </div>
-		
-		
+
+
         <!-- /.col -->
       </div>
       <!-- /.row -->
     </section>
     <!-- /.content -->
-  
+
 
   <div class="navbar navbar-default navbar-fixed-bottom grey">
     <div class="container">
      <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 
 </div>
 
- 
+
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
@@ -169,33 +199,33 @@ if(!isset($_SESSION['id']))
 <script>
 var json_events;
   $(document).ready(function () {
-	  
-	  
+
+
 	  var date = new Date();
 		var d = date.getDate(),
         m = date.getMonth()+1,
         y = date.getFullYear();
-		
+
 		if(m < 10)
 		{
 				 m='0'+m;
 		}
 		var m_y=m+"-"+y;
-	  
+
 	  $.ajax({
-		  
+
 		url: "ajax/allocation_data.php",
         type: 'POST', // Send post data
 		data: 'm_y='+m_y,
         async: false,
         success: function(s)
 		{
-			
+
         	json_events = s;
 			//alert(json_events);
 			//var a=JSON.parse(json_events);
-			   
-			
+
+
         }
 	});
   });
@@ -235,9 +265,9 @@ var json_events;
         m = date.getMonth(),
         y = date.getFullYear();
     $('#calendar').fullCalendar({
-		
+
 	events: JSON.parse(json_events),
-		
+
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -249,11 +279,11 @@ var json_events;
         week: 'week',
         day: 'day'
       },
-	  
-	  
+
+
       //Random default events
    /*    events: [
-        
+
       ],
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar !!!
@@ -283,9 +313,9 @@ var json_events;
 
       }
     }); */
-	
-	 
-    }); 
+
+
+    });
 
 
     /* ADDING EVENTS */
@@ -319,8 +349,8 @@ var json_events;
       //Remove event from text input
       $("#new-event").val("");
     }); */
-	
-	
+
+
   });
 </script>
 
