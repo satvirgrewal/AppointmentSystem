@@ -144,14 +144,14 @@ h2{
 
 <!--   main  -->
 <h1 style="padding-left:25px; text-align:center;">Contact Us</h1>
-<div class="container-fluid bg-main" style="height:800px;">
+<div class="container-fluid bg-main" >
   <div class="row">
    <div class="col-md-12" style="
 
 ">
 
     <div class="col-md-6" style="
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
@@ -166,7 +166,7 @@ h2{
 
 <center>
 <div class="col-md-5">
-    <div class="form-area">
+    <div class="form-area" style="margin-bottom: 60px;">
 
         <form role="form">
 
@@ -185,11 +185,11 @@ h2{
 						<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
 					</div>
                     <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="5"></textarea>
 
                     </div>
 
-        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+        <button type="button" id="submit" name="submit" class="btn btn-primary pull-center" >Submit Form</button>
 
         </form>
 
