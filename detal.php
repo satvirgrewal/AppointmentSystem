@@ -18,7 +18,7 @@
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
-	  HEIGHT:50%;
+	  HEIGHT:100%;
 
   }
   /* Desktop layout of Howdy Professor */
@@ -165,7 +165,7 @@ h2{
   <p
 style="
  font-size: 30px;
-">SCHEDULE ONLINE. IT'S EASY, FAST AND SECURE</p>
+">Schedule Online. It's Easy, Fast and Secure</p>
 
 <a href="booking_selection.php">	<button type="button"  class="btn btnn btn-primary">Book An Appointment</button></a>
     </div>
