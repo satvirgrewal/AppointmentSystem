@@ -10,19 +10,19 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="main.css" rel="stylesheet" type="text/css">
- 
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- 
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
 	  HEIGHT:50%;
-     
+
   }
- 
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -66,20 +66,22 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-left ">
-				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
+				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile"></li>
 				<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;margin-top:25px;margin-left:50px;">
+            <ul class="nav navbar-nav navbar-center" style="background-color:#009591;">
       <li class="navigation fnt"><a href="index.php" style="
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 50px;
 ">HOME</a></li>
- 
+
       <li  class="navigation fnt"><a href="about.php"style="
     padding-left: 20px;
     padding-right: 50px;
 ">ABOUT US</a></li>
-     <li class="dropdown navigation fnt">
+        <li class="dropdown navigation fnt" style="
+        padding-left: 5px;
+        padding-right: 50px;">
         <a class="dropdown-toggle navigation " data-toggle="dropdown" href="#">DEPARTMENT
         <span class="caret"></span></a>
         <ul class="dropdown-menu ">
@@ -103,8 +105,8 @@
 ">CONTACT</a></li>
 
     </ul>
-	
-	<ul class="nav navbar-nav navbar-right ">
+
+	<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
         </div>
@@ -112,32 +114,33 @@
 </nav>
 
 <!--   main  -->
-<h1 style="padding-left:25px;">Contact Us</h1>
+<h1 style="padding-left:25px; text-align:center;">Contact Us</h1>
 <div class="container-fluid bg-main" style="height:800px;">
   <div class="row">
    <div class="col-md-12" style="
-   
+
 ">
-  
+
     <div class="col-md-6" style="
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
 ">
 <center>
       <img id="map" src="3.jpg" class="img-responsive" style="height: 282px;">
     </center>
 	</div>
     <div class="col-md-6">
-     
-  
+
+
 
 <center>
 <div class="col-md-5">
-    <div class="form-area">  
-	
+    <div class="form-area">
+
         <form role="form">
-		
+
         <br style="clear:both">
                     <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
     				<div class="form-group">
@@ -154,13 +157,13 @@
 					</div>
                     <div class="form-group">
                     <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                                           
+
                     </div>
-            
+
         <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
-		
+
         </form>
-		
+
     </div>
 </div>
 </center>
@@ -190,14 +193,14 @@
       <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 
 
