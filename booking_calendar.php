@@ -94,7 +94,38 @@ h2{
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="row">
 <div class="col-md-12">
-<nav class="navbar navbar-inverse navi" style=" margin-bottom:0px;">
+
+
+	<nav class="navbar navbar-inverse navbar-static-top navi" role="navigation">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	        </div>
+
+	        <!-- Collect the nav links, forms, and other content for toggling -->
+	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-left ">
+					<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile"></li>
+					<li  ><h1 style="padding-left:20px;color:white;">Howdy<br/> Professor</h1></li>
+				</ul>
+	            <ul class="nav navbar-nav navbar-center " style="background-color:#009591;">
+		<li class="navigation   fnt"><a href="booking_selection.php"style="padding-left: 50px;padding-right: 30px;">Appointment Booking</a></li>
+	   <li class="navigation   fnt"><a href="student_calendar.php"style="padding-left: 50px;padding-right: 30px;">My Scheduler</a></li>
+	    <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
+
+	    </ul>
+		<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
+					<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
+				</ul>
+	        </div>
+	    </div>
+	</nav>
+<!-- <nav class="navbar navbar-inverse navi" style=" margin-bottom:0px;">
   <div class="container-fluid">
     <div class="navbar-header">
 
@@ -113,7 +144,7 @@ h2{
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
   </div>
-</nav>
+</nav> -->
 
 </div>
 </div>
