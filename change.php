@@ -29,32 +29,62 @@ if(!isset($_SESSION['id']))
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <link href="main.css" rel="stylesheet" type="text/css">
- 
+
   <style>
   .fc-other-month #any,.fc-other-month #a ,.fc-other-month .block ,.fc-other-month #b{
 	  display:none;
   }
-  
+
   .a{
 	  position: absolute;
 	 top:50px;
 	  left:50px;
-	  
+
   }
   .b{
 	  position: absolute;
 	  top:70px;
 	  left:50px;
   }
- 
-  
+
+
   .fc-week{
 		height:100px !important;
   }
-  
+
+	      /* Desktop layout of Howdy Professor */
+	    #navbar-mobile{
+	      display: block;
+	    }
+	    h2{
+	      font-size: 2em;
+	      font-weight: bold;
+	    }
+	    .navbar-center{
+	      margin: 25px 0px 0px 25px;
+	    }
+	    /* Mobile layout of Howdy Professor uses media queries to adjust layout based on the device size */
+	    @media (max-width: 768px){
+	      #navbar-mobile{
+	        display: none; /* Only show very important content in mobile version*/
+	      }
+	      h2{
+	        font-size: 2em; /* font weight is not bold in mobile version to make it astetically pleasing */
+	      }
+	      .nav h1 {
+	        text-align: center;
+	      }
+	      .navbar-center{
+	        margin-left: 0px;
+	        width: 100%;
+	        height: 100%;
+	      }
+	    }
+
+	      /* End of style formatting of html page */
   </style>
 
-  
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="row">
@@ -73,17 +103,17 @@ if(!isset($_SESSION['id']))
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-left ">
-				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
+				<li  ><img src="pro1.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;" id="navbar-mobile"></li>
 				<li  ><h1 style="padding-left:20px;color:white;">Appointment<br/> Scheduler</h1></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-center " style="background-color:#009591;margin-top:25px;margin-left:50px;">
-			
+            <ul class="nav navbar-nav navbar-center " style="background-color:#009591;">
+
 	<li class="navigation   fnt"><a href="staff_profile.php"style="padding-left: 50px;padding-right: 30px;">Profile</a></li>
    <li class="navigation   fnt"><a href="change.php"style="padding-left: 50px;padding-right: 30px;">Change Availability</a></li>
    <li class="navigation   fnt"><a href="staff_schedule.php"style="padding-left: 50px;padding-right: 30px;">My Scheduler</a></li>
     <li class="navigation   fnt"><a href="logout.php?logout"style="padding-left: 50px;padding-right: 30px;">Logout</a></li>
     </ul>
-	<ul class="nav navbar-nav navbar-right ">
+	<ul class="nav navbar-nav navbar-right " id="navbar-mobile">
 				<li  ><img src="pro2.jpg" class="img-responsive" alt="Chania"  style="padding-top:20px;padding-bottom:20px;"></li>
 			</ul>
         </div>
@@ -94,11 +124,11 @@ if(!isset($_SESSION['id']))
 <h1 style="padding-left:25px;">Change Availability</h1>
 <div class="wrapper" style="    background-color:white;">
 
-   
+
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        
+
         <!-- /.col -->
         <div class="col-md-12" >
           <div class="box box-primary">
@@ -106,36 +136,36 @@ if(!isset($_SESSION['id']))
               <!-- THE CALENDAR -->
               <div id="calendar"></div>
 			  <br/>
-			   
-			  
-				
+
+
+
 			</div>
             <!-- /.box-body -->
           </div>
           <!-- /. box -->
         </div>
-		
-		
+
+
         <!-- /.col -->
       </div>
       <!-- /.row -->
     </section>
     <!-- /.content -->
-  
+
 
   <div class="navbar navbar-default navbar-fixed-bottom grey">
     <div class="container">
      <div class="row">
 		<div class="col-md-12">
       <p class="navbar-text pull-left" >
-          
+
       </p>
 	  </div>
 	  </div>
-    
+
     </div>
-    
-    
+
+
   </div>
 
 </div>
@@ -143,13 +173,13 @@ if(!isset($_SESSION['id']))
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Day Wise Entry<span id="date" style="float:right;padding-right:10px;"></span></h4>
-		  
+
         </div>
         <div class="modal-body">
 		<span id="date"></span>
@@ -174,13 +204,13 @@ if(!isset($_SESSION['id']))
 									{
 									   $array_of_time[] = date ("h:i", $start_time);
 									   $start_time += $add_mins; // to check endtie=me
-									} 
-									
+									}
+
 									return $array_of_time;
 								}
-								
+
 								$sql="select * from profile where staff_id='".$_SESSION['id']."'";
-								
+
 								foreach($dbh->query($sql) as $row)
 								{
 									$m_start=$row['mor_start'];
@@ -190,9 +220,9 @@ if(!isset($_SESSION['id']))
 									$e_start=$row['eve_start'];
 									$e_end=$row['eve_end'];
 									$time_slot=$row['time_slot'];
-									
-								}	
-								
+
+								}
+
 								$m=array();
 								$j=1;
 								$m=time_slot($m_start,$m_end,$time_slot);
@@ -202,14 +232,14 @@ if(!isset($_SESSION['id']))
 								<li style="display:inline;padding-left:0px;">
 								<input type="checkbox" name="arr1" class='check' id="<?php echo "any".$j; ?>" value="<?php echo $m[$i].'AM'; ?>" checked>&nbsp;&nbsp;<?php echo $m[$i].'AM'; ?>&nbsp;&nbsp;
 								</li>
-									
+
 								<?php
 								$j++;
 								}
 								?>
-						
+
                 </div>
-              
+
 				</div>
 				<div class="col-md-12">
 				<div class="form-group">
@@ -224,14 +254,14 @@ if(!isset($_SESSION['id']))
 								<li style="display:inline;padding-left:0px;">
 								<input type="checkbox" name="arr2" class='check' id="<?php echo "aft".$j; ?>" value="<?php echo $m[$i].'PM'; ?>" checked>&nbsp;&nbsp;<?php echo $m[$i].'PM'; ?>&nbsp;&nbsp;
 								</li>
-									
+
 								<?php
 								$j++;
 								}
 								?>
-							
+
                 </div>
-              
+
 				</div>
 				<div class="col-md-12">
 				<div class="form-group">
@@ -246,32 +276,32 @@ if(!isset($_SESSION['id']))
 								<li style="display:inline;padding-left:0px;">
 								<input type="checkbox" name="arr3" class='check' id="<?php echo "eve".$j; ?>" value="<?php echo $m[$i].'PM'; ?>" checked>&nbsp;&nbsp;<?php echo $m[$i].'PM'; ?>&nbsp;&nbsp;
 								</li>
-									
+
 								<?php
 								$j++;
 								}
 								?>
-							
+
                 </div>
-              
+
 				</div>
-				
+
 				<div class="col-md-12">
-				   
+
 				</div>
 		  </div>
-		  
+
         </div>
         <div class="modal-footer">
 		  <button type="button" class="btn btn-primary" style="width:10%;" id="modal_save" >Save</button>
           <button type="button" class="btn btn-default" id="modal_close" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
+
     </div>
   </div>
   <div id='msg'></div>
- <!--    Modal Over --> 
+ <!--    Modal Over -->
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
@@ -296,37 +326,37 @@ if(!isset($_SESSION['id']))
 <!-- Page specific script -->
 <script>
   $(function () {
-	  
-	  
+
+
 setTimeout(function() {
 	/*-------- Onload Retrive Checkbox Data---------------*/
-			var mon_year=$('#calendar .fc-toolbar .fc-center').find('h2').text(); // March,2016 
+			var mon_year=$('#calendar .fc-toolbar .fc-center').find('h2').text(); // March,2016
 			var m = mon_year.split(" ");
 			var monthNames =["January","February","March","April","May","June","July","August","September","October","November","December"];
 			temp =  monthNames.indexOf(m[0]);
-			
+
 			temp++;
 			if(temp < 10)
 			{
 				 temp='0'+temp;
 			}
-			
+
 			//alert(temp);
 			var m_y=temp+"-"+m[1];
 			//alert(m_y);
-		
-		$.ajax({ 
+
+		$.ajax({
 							type: "POST",
 							url: "ajax/change_data.php?m_y="+m_y,
-							
+
 							success: function(data)
 							{
 								//alert(data);
 									$('#msg').html(data);
-									
+
 							}
-								
-		}); 
+
+		});
  }, 500);/* initialize the external events
      -----------------------------------------------------------------*/
     function ini_events(ele) {
@@ -373,11 +403,11 @@ setTimeout(function() {
         week: 'week',
         day: 'day'
       },
-	  
-	  
+
+
       //Random default events
    /*    events: [
-        
+
       ],
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar !!!
@@ -407,7 +437,7 @@ setTimeout(function() {
 
       }
     }); */
-	
+
 	dayClick: function(date, jsEvent, view) {
 		  var dt=date.format();
 		dt = new Date(dt);
@@ -466,34 +496,34 @@ setTimeout(function() {
       $("#new-event").val("");
     });
   });
-  
-  /*------------	Modal Save Button	----------*/ 
+
+  /*------------	Modal Save Button	----------*/
 	var i=0;
-	
+
 	var str="";
 	var j=1;
-	
+
 	var k=0;
 	var str1="";
 	var l=1;
-	
+
 	var k1=0;
 	var str2 ="";
 	var l1=1;
 	var temp='';
     $('#modal_save').click(function () {
-		
+
 			var date = $('#date').text(); // Format:Selected Date:2017-02-15
 
 			            $('input[name=arr1]').each(function() {
-								
+
 									i++;
-								
+
 							});
-							
+
 							i++;
 							//alert(i);
-							
+
 							for(j = 1; j <  i; j++)
 							{
 								var temp="any"+j;
@@ -507,17 +537,17 @@ setTimeout(function() {
 									str=str+"-"+temp;	// Location Value in String
 								}
 								//alert(str);
-							} 
+							}
 							i=0;
 							j=1;
-							
-							
+
+
 							$('input[name=arr2]').each(function() {
-								
+
 									k++;
-								
+
 							});
-							
+
 							k++;
 							//alert(k);
 							for(l = 1; l <  k; l++)
@@ -533,16 +563,16 @@ setTimeout(function() {
 									str1=str1+"-"+temp1;	// Location Value in String
 								}
 								//alert(str);
-							} 
+							}
 							k=0;
 							l=1;
-							
+
 							$('input[name=arr3]').each(function() {
-								
+
 									k1++;
-								
+
 							});
-							
+
 							k1++;
 							//alert(k1);
 							for(l1 = 1; l1 <  k1; l1++)
@@ -558,14 +588,14 @@ setTimeout(function() {
 									str2=str2+"-"+temp2;	// Location Value in String
 								}
 								//alert(str);
-							} 
+							}
 							k1=0;
 							l1=1;
 							$.ajax
-								({ 
+								({
 									type: "POST",
 									url: "ajax/change_data.php?date="+date+"&str="+str+"&str1="+str1+"&str2="+str2,
-									
+
 									success: function(data)
 									{
 										str='';
@@ -573,15 +603,15 @@ setTimeout(function() {
 										str2='';
 										//alert(data);
 										$('#msg').html(data);
-										$('#myModal').modal('hide'); 
+										$('#myModal').modal('hide');
 										alert('Data Save Successfully');
-										
+
 									}
 								});
-			
-	
+
+
 	});
-	
+
 </script>
 
 
